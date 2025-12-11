@@ -7,14 +7,9 @@ interface DraggableContainerProps {
   className?: string;
 }
 
-export function DraggableContainer({
-  children,
-  onSendToBack,
-  className,
-}: DraggableContainerProps) {
+export function DraggableContainer({children,onSendToBack,className,}:DraggableContainerProps) {
   const { x, y, rotateX, rotateY, handleDragEnd } =
     useCardRotation(onSendToBack);
-
   return (
     <motion.div
       className={className}
